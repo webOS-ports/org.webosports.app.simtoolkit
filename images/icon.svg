@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SIM Toolkit's icon: a SIM card with its contact pad, and a menu.
+     Copyright 2026 Herman van Hazendonk <github.com@herrie.org>
+     SPDX-License-Identifier: Apache-2.0
+     tools/make-icon.sh renders it to icon.png and icon-256x256.png. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4fae6a"/>
+      <stop offset="1" stop-color="#23703c"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6dc8a"/>
+      <stop offset="1" stop-color="#c79a2c"/>
+    </linearGradient>
+  </defs>
+  <!-- The card, its corner cut off, with a darker rim. -->
+  <path d="M 60 20 L 166 20 L 214 68 L 214 222 Q 214 236 200 236 L 60 236 Q 46 236 46 222 L 46 34 Q 46 20 60 20 Z"
+        fill="url(#card)" stroke="#174d29" stroke-width="5" stroke-linejoin="round"/>
+  <!-- The contact pad. -->
+  <rect x="74" y="56" width="84" height="64" rx="10" ry="10" fill="url(#chip)" stroke="#8a6a1c" stroke-width="3"/>
+  <path d="M 74 78 L 104 78 M 74 98 L 104 98 M 128 78 L 158 78 M 128 98 L 158 98 M 104 56 L 104 120 M 128 56 L 128 120"
+        fill="none" stroke="#8a6a1c" stroke-width="3"/>
+  <!-- The menu. -->
+  <g fill="#ffffff">
+    <circle cx="82" cy="152" r="7"/>
+    <rect x="98" y="146" width="84" height="12" rx="6"/>
+    <circle cx="82" cy="180" r="7"/>
+    <rect x="98" y="174" width="70" height="12" rx="6"/>
+    <circle cx="82" cy="208" r="7"/>
+    <rect x="98" y="202" width="78" height="12" rx="6"/>
+  </g>
+</svg>
