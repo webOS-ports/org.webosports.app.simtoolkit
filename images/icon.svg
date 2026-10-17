@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- SIM Toolkit's icon: a SIM card with its contact pad, and a menu.
      Copyright 2026 Herman van Hazendonk <github.com@herrie.org>
-     SPDX-License-Identifier: Apache-2.0
+     SPDX-License-Identifier: GPL-3.0-only
      tools/make-icon.sh renders it to icon.png and icon-256x256.png. -->
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
   <defs>

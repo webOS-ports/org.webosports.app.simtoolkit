@@ -60,3 +60,7 @@ This builds an ipk (Architecture: all, since the app is QML only) and
 installs it through `com.webos.appInstallService`.
 
 `tools/make-icon.sh` renders `images/icon.svg` into the PNG icons.
+
+## Licence
+
+GNU General Public License version 3; see LICENSE.
