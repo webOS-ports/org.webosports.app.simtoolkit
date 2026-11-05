@@ -1,6 +1,7 @@
 #!/bin/sh
-# Every host test: qml/js/Stk.js in QML's own engine (tst_logic.qml) and
-# the app with a fake telephonyd (tst_ui.qml).
+# Every host test: qml/js/Stk.js in QML's own engine (tst_logic.qml),
+# the app with a fake telephonyd (tst_ui.qml) and its screens on each
+# device in PROFILES (tests/screens/tst_screens.qml).
 #
 #   tools/run-tests.sh [path to luneos-components]
 #

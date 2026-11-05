@@ -47,6 +47,21 @@ which starts the app with `tests/qml/FakeStkBus.qml` standing in for
 telephonyd and covers every request type. Both run with qmltestrunner and
 luneos-components' desktop build.
 
+`tests/screens/tst_screens.qml` opens every screen of the app: the menu,
+the menu with no SIM toolkit, with a telephonyd that has none and with a
+notice, and each kind of request (a choice, a message and a long one,
+text, hidden digits, a key, a quick digit, a call, a web page, a data
+connection and a tone). It runs once per device in `PROFILES`, by default
+the MindPhone (480x800), the Q25 (720x720), the TouchPad (1024x768) and
+the FuriPhone FLX1s (radon, 720x1600), and checks that what each screen
+needs is shown, has a size and lies inside the window. Each screen is
+saved as `build/test-output/ui/<profile>-<screen>.png` to look at.
+
+```sh
+PROFILES="q25 radon" tools/run-tests.sh   # some of the devices
+PROFILES= tools/run-tests.sh              # no screens
+```
+
 `tools/mutation-check.sh` breaks the code in 19 ways, one at a time, and
 checks that the tests catch each one.
 
