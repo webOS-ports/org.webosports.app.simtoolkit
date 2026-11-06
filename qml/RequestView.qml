@@ -326,7 +326,10 @@ FocusScope {
                     Layout.fillWidth: true
                     text: parent.parent.labels.no
                     enabled: !view.busy
-                    LuneOSButton.mainColor: LuneOSButton.negativeColor
+                    // The way out, left of Yes: the default light button;
+                    // answering No destroys nothing, and red is for
+                    // destructive actions only (webOS).
+                    LuneOSButton.mainColor: LuneOSButton.secondaryColor
                     onClicked: view.answer(false)
                 }
                 Button {

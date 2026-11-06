@@ -5,6 +5,7 @@
 
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls.LuneOS
 import QtTest
 
 /*
@@ -272,6 +273,18 @@ TestCase {
         verify(!inView("endButton").visible);
         mouseClick(inView("noButton"));
         compare(lastRespond().value, false);
+    }
+
+    // webOS: green for Yes, red only for what destroys something; No is the
+    // default light button.
+    function test_no_is_not_red() {
+        createApp();
+        bus.pushRequest(req(8, "confirmCallSetup", { text: "Call 1194?", answer: "boolean",
+                                                     allowed: { goBack: false, endSession: true, busy: false } }));
+        var no = inView("noButton"), yes = inView("yesButton");
+        compare(yes.LuneOSButton.mainColor, yes.LuneOSButton.affirmativeColor);
+        compare(no.LuneOSButton.mainColor, no.LuneOSButton.secondaryColor);
+        verify(no.LuneOSButton.mainColor !== no.LuneOSButton.negativeColor);
     }
 
     function test_confirm_browser() {
